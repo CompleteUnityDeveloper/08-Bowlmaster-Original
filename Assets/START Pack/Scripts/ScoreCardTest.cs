@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 /// <summary>
+/// This code will be used towards the end of the section for testing our score system.
 /// Note that strikes should be entered as 10 (not 10,0)
 /// </summary>
 public class ScoreCardTest : MonoBehaviour {
