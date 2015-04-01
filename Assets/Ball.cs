@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Ball : MonoBehaviour {
-	public float launchSpeed;
+	public Vector3 launchVeclocity;
 	
 	private Rigidbody rigidBody;
 	private AudioSource audioSource;
@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody>();
-		rigidBody.velocity = new Vector3 (0, 0, launchSpeed);
+		rigidBody.velocity = launchVeclocity;
 		
 		audioSource = GetComponent<AudioSource>();
 		audioSource.Play();
