@@ -12,7 +12,13 @@ public class DragLaunch : MonoBehaviour {
 	void Start () {
 		ball = GetComponent<Ball> ();
 	}
-	
+
+	public void MoveStart (float amount) {
+		if ( ! ball.inPlay) {
+			ball.transform.Translate (new Vector3 (amount, 0, 0));
+		}
+	}
+
 	public void DragStart () {
 		// Capture time & position of drag start
 		dragStart = Input.mousePosition;
@@ -25,7 +31,6 @@ public class DragLaunch : MonoBehaviour {
 		endTime = Time.time;
 
 		float dragDuration = endTime - startTime;
-		@
 		float launchSpeedX = (dragEnd.x - dragStart.x) / dragDuration;
 		float launchSpeedZ = (dragEnd.y - dragStart.y) / dragDuration;
 
