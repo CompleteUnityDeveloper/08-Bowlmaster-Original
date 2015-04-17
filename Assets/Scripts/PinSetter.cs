@@ -30,8 +30,7 @@ public class PinSetter : MonoBehaviour {
 		Debug.Log ("Raising pins");
 		foreach (Pin pin in GameObject.FindObjectsOfType<Pin>()) {
 			if (pin.IsStanding()) {
-				pin.transform.position += new Vector3 (0, distanceToRaise, 0);
-				print ("raising pin " + pin.name);
+				pin.transform.Translate (new Vector3 (0, distanceToRaise, 0));
 			}
 		}
 	}
