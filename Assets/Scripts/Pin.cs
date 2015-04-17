@@ -4,6 +4,7 @@ using System.Collections;
 public class Pin : MonoBehaviour {
 
 	public float standingThreshold = 3f;
+	public float distToRaise = 40f;
 
 	private Rigidbody rigidBody;
 	
@@ -30,13 +31,16 @@ public class Pin : MonoBehaviour {
 		}
 	}
 
-	public bool RaiseIfStanding (float distance) {
-		if (IsStanding()) {
+	public void RaiseIfStanding () {
+		if (IsStanding ()) {
 			rigidBody.useGravity = false;
-			transform.position += new Vector3 (0, distance, 0);
-			return true;
-		} else {
-			return false;
+			transform.Translate (new Vector3 (0, distToRaise, 0), Space.World);
 		}
 	}
+
+	public void Lower () {
+		transform.Translate (new Vector3 (0, -distToRaise, 0), Space.World);
+		rigidBody.useGravity = true;
+	}
+
 }

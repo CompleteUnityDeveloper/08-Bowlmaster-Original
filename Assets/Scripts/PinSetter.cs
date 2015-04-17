@@ -29,14 +29,14 @@ public class PinSetter : MonoBehaviour {
 		// raise standing pins only by distanceToRaise
 		Debug.Log ("Raising pins");
 		foreach (Pin pin in GameObject.FindObjectsOfType<Pin>()) {
-			if (pin.IsStanding()) {
-				pin.transform.Translate (new Vector3 (0, distanceToRaise, 0));
-			}
+			pin.RaiseIfStanding();
 		}
 	}
 
 	public void LowerPins () {
-
+		foreach (Pin pin in GameObject.FindObjectsOfType<Pin>()) {
+			pin.Lower();
+		}
 	}
 
 	public void RenewPins () {
