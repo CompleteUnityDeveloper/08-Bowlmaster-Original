@@ -5,7 +5,6 @@ using System.Collections;
 public class PinSetter : MonoBehaviour {
 	public int lastStandingCount = -1;
 	public Text standingDisplay;
-	public float distanceToRaise = 0.40f;
 	public GameObject pinSet;
 
 	private Ball ball;
@@ -22,12 +21,11 @@ public class PinSetter : MonoBehaviour {
 		standingDisplay.text = CountStanding ().ToString ();
 
 		if (ballEnteredBox) {
-			CheckStanding();
+			UpdateStandingCountAndSettle();
 		}
 	}
 
 	public void RaisePins () {
-		// raise standing pins only by distanceToRaise
 		Debug.Log ("Raising pins");
 		foreach (Pin pin in GameObject.FindObjectsOfType<Pin>()) {
 			pin.RaiseIfStanding();
@@ -47,7 +45,7 @@ public class PinSetter : MonoBehaviour {
 
 	}
 
-	void CheckStanding () {
+	void UpdateStandingCountAndSettle () {
 		// Update the lastStandingCount
 		// Call PinsHaveSettled() when they have
 		int currentStanding = CountStanding ();
@@ -82,14 +80,6 @@ public class PinSetter : MonoBehaviour {
 		}
 
 		return standing;
-	}
-
-	void OnTriggerExit (Collider collider) {
-		GameObject thingLeft = collider.gameObject;
-
-		if (thingLeft.GetComponent<Pin> ()){
-			Destroy (thingLeft);
-		}
 	}
 
 	void OnTriggerEnter (Collider collider) {
