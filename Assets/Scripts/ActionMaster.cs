@@ -16,8 +16,8 @@ public class ActionMaster {
 			return Action.EndGame;
 		}
 
-		// Hanld last-frame special cases
-		if ( bowl == 19 && pins == 10 ){
+		// Handle last-frame special cases
+		if ( bowl >= 19 && pins == 10 ){
 			bowl++;
 			return Action.Reset;
 		} else if ( bowl == 20 ) {
@@ -33,15 +33,15 @@ public class ActionMaster {
 			}
 		}
 
-		if (pins == 10) {
-			bowl += 2;
-			return Action.EndTurn;
-		}
-
-		if (bowl % 2 != 0) { // Mid frame (or last frame)
-			bowl += 1;
-			return Action.Tidy;
-		} else if (bowl % 2 == 0) { // End of frame
+		if (bowl % 2 != 0) { // First bowl of frame
+			if (pins == 10) {
+				bowl += 2;
+				return Action.EndTurn;
+			} else {
+				bowl += 1;
+				return Action.Tidy;
+			}
+		} else if (bowl % 2 == 0) { // Second bowl of frame
 			bowl += 1;
 			return Action.EndTurn;
 		}
