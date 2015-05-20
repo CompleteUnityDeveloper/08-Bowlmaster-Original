@@ -159,57 +159,57 @@ public class ScoreMasterTest {
 		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
 	}
 
-//	//http://slocums.homestead.com/gamescore.html
-//	[Category ("Verification")]
-//	[Test]
-//	public void TG02GoldenCopyA () {
-//		int[] rolls = { 10, 7,3, 9,0, 10, 0,8, 8,2, 0,6, 10, 10, 10,8,1};
-//		int[] totalS = {20,  39,  48, 66,  74,  84,  90,120,148,    167};
-//		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
-//	}
-//	
-//	//http://guttertoglory.com/wp-content/uploads/2011/11/score-2011_11_28.png
-//	[Category ("Verification")]
-//	[Test]
-//	public void TG03GoldenCopyB1of3 () {
-//		int[] rolls = { 10, 9,1, 9,1, 9,1, 9,1, 7,0, 9,0, 10, 8,2, 8,2,10};
-//		int[] totalS = {20,  39,  58,  77,  94, 101, 110,130, 148,    168};
-//		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
-//	}
-//
-//	//http://guttertoglory.com/wp-content/uploads/2011/11/score-2011_11_28.png
-//	[Category ("Verification")]
-//	[Test]
-//	public void TG03GoldenCopyB2of3 () {
-//		int[] rolls = { 8,2, 8,1, 9,1, 7,1, 8,2, 9,1, 9,1, 10, 10, 7,1};
-//		int[] totalS = { 18,  27,  44,  52,  71,  90, 110,137,155, 163};
-//		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
-//	}
-//
-//	//http://guttertoglory.com/wp-content/uploads/2011/11/score-2011_11_28.png
-//	[Category ("Verification")]
-//	[Test]
-//	public void TG03GoldenCopyB3of3 () {
-//		int[] rolls = { 10, 10, 9,0, 10, 7,3, 10, 8,1, 6,3, 6,2, 9,1,10};
-//		int[] totalS = {29, 48,  57, 77,  97,116, 125, 134, 142,    162};
-//		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
-//	}
-//
-//	// http://brownswick.com/wp-content/uploads/2012/06/OpenBowlingScores-6-12-12.jpg
-//	[Category ("Verification")]
-//	[Test]
-//	public void TG03GoldenCopyC1of3 () {
-//		int[] rolls = { 7,2, 10, 10, 10, 10, 7,3, 10, 10, 9,1, 10,10,9};
-//		int[] totalS = {  9, 39, 69, 96,116, 136,165,185, 205,     234};
-//		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
-//	}
-//
-//	// http://brownswick.com/wp-content/uploads/2012/06/OpenBowlingScores-6-12-12.jpg
-//	[Category ("Verification")]
-//	[Test]
-//	public void TG03GoldenCopyC2of3 () {
-//		int[] rolls = { 10, 10, 10, 10, 9,0, 10, 10, 10, 10, 10,9,1};
-//		int[] totalS = {30, 60, 89,108, 117,147,177,207,236,    256};
-//		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
-//	}
+	// http://slocums.homestead.com/gamescore.html
+	[Test]
+	[Category ("Verification")]
+	public void TG02GoldenCopyA () {
+		int[] rolls = { 10, 7,3, 9,0, 10, 0,8, 8,2, 0,6, 10, 10, 10,8,1};
+		int[] totalS = {20,  39,  48, 66,  74,  84,  90,120,148,    167};
+		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
+	}
+	
+	//http://guttertoglory.com/wp-content/uploads/2011/11/score-2011_11_28.png
+	[Category ("Verification")]
+	[Test]
+	public void TG03GoldenCopyB1of3 () {
+		int[] rolls = { 10, 9,1, 9,1, 9,1, 9,1, 7,0, 9,0, 10, 8,2, 8,2,10};
+		int[] totalS = {20,  39,  58,  77,  94, 101, 110,130, 148,    168};
+		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
+	}
+
+	//http://guttertoglory.com/wp-content/uploads/2011/11/score-2011_11_28.png
+	[Category ("Verification")]
+	[Test]
+	public void TG03GoldenCopyB2of3 () {
+		int[] rolls = { 8,2, 8,1, 9,1, 7,1, 8,2, 9,1, 9,1, 10, 10, 7,1};
+		int[] totalS = { 18,  27,  44,  52,  71,  90, 110,137,155, 163};
+		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
+	}
+
+	//http://guttertoglory.com/wp-content/uploads/2011/11/score-2011_11_28.png
+	[Category ("Verification")]
+	[Test]
+	public void TG03GoldenCopyB3of3 () {
+		int[] rolls = { 10, 10, 9,0, 10, 7,3, 10, 8,1, 6,3, 6,2, 9,1,10};
+		int[] totalS = {29, 48,  57, 77,  97,116, 125, 134, 142,    162};
+		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
+	}
+
+	// http://brownswick.com/wp-content/uploads/2012/06/OpenBowlingScores-6-12-12.jpg
+	[Category ("Verification")]
+	[Test]
+	public void TG03GoldenCopyC1of3 () {
+		int[] rolls = { 7,2, 10, 10, 10, 10, 7,3, 10, 10, 9,1, 10,10,9};
+		int[] totalS = {  9, 39, 69, 96,116, 136,165,185, 205,     234};
+		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
+	}
+
+	// http://brownswick.com/wp-content/uploads/2012/06/OpenBowlingScores-6-12-12.jpg
+	[Category ("Verification")]
+	[Test]
+	public void TG03GoldenCopyC2of3 () {
+		int[] rolls = { 10, 10, 10, 10, 9,0, 10, 10, 10, 10, 10,9,1};
+		int[] totalS = {30, 60, 89,108, 117,147,177,207,236,    256};
+		Assert.AreEqual (totalS.ToList(), ScoreMaster.ScoreCumulative (rolls.ToList()));
+	}
 }
