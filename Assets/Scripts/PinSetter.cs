@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -38,16 +38,16 @@ public class PinSetter : MonoBehaviour {
 
 	}
 
-	public void PerformAction (ActionMaster.Action action) {
-		if (action == ActionMaster.Action.Tidy) {
+	public void PerformAction (ActionMasterOld.Action action) {
+		if (action == ActionMasterOld.Action.Tidy) {
 			animator.SetTrigger ("tidyTrigger");
-		} else if (action == ActionMaster.Action.EndTurn) {
+		} else if (action == ActionMasterOld.Action.EndTurn) {
 			animator.SetTrigger ("resetTrigger");
 			pinCounter.Reset ();
-		} else if (action == ActionMaster.Action.Reset) {
+		} else if (action == ActionMasterOld.Action.Reset) {
 			animator.SetTrigger ("resetTrigger");
 			pinCounter.Reset ();
-		} else if (action == ActionMaster.Action.EndGame) {
+		} else if (action == ActionMasterOld.Action.EndGame) {
 			throw new UnityException ("Don't know how to handle end game yet");
 		}
 	}

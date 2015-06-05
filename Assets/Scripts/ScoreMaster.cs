@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ScoreMaster {
+public static class ScoreMaster {
 
 	// Returns a list of cumulative scores, like a normal score card.
 	public static List<int> ScoreCumulative (List<int> rolls) {

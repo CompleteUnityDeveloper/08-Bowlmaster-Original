@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
 		try {
 			bowls.Add (pinFall);
 			ball.Reset ();
-			pinSetter.PerformAction (ActionMaster.NextAction (bowls));
+			pinSetter.PerformAction (ActionMasterOld.NextAction (bowls));
 		} catch {
 			Debug.LogWarning ("Something went wrong in Bowl()");
 		}
