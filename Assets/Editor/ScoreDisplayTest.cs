@@ -47,7 +47,12 @@ public class ScoreDisplayTest {
 		Assert.AreEqual (rollsString, ScoreDisplay.FormatRolls (rolls.ToList()));
 	}
 
-	
+	[Test]
+	public void T06Bowl010 () {
+		int[] rolls = {0,10};
+		string rollsString = "-/"; // Remember the space
+		Assert.AreEqual (rollsString, ScoreDisplay.FormatRolls (rolls.ToList()));
+	}
 
 	//http://guttertoglory.com/wp-content/uploads/2011/11/score-2011_11_28.png
 	[Category ("Verification")]
@@ -90,7 +95,7 @@ public class ScoreDisplayTest {
 	[Test]
 	public void TG05GoldenCopyC2of3 () {
 		int[] rolls = { 10, 10, 10, 10, 9,0, 10, 10, 10, 10, 10,9,1};
-		string rollsString = "X X X X 9-X X X X X91";
+		string rollsString = "X X X X 9-X X X X X9/";
 		Assert.AreEqual (rollsString, ScoreDisplay.FormatRolls(rolls.ToList()));
 	}
 

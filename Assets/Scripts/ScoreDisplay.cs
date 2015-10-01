@@ -28,7 +28,7 @@ public class ScoreDisplay : MonoBehaviour {
 
 			if (rolls[i] == 0) {									// Always enter 0 as -
 				output += "-";
-			} else if (box % 2 == 0 && rolls[i-1]+rolls[i] == 10) {	// SPARE anywhere
+			} else if ((box%2 == 0 || box == 21) && rolls[i-1]+rolls[i] == 10) {	// SPARE
 				output += "/";	
 			} else if (box >= 19 && rolls[i] == 10)	{				// STRIKE in frame 10
 				output += "X";
