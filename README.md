@@ -395,6 +395,3 @@ resources below. You can just as easily use a **while** loop.
 
 
 ### Section 8 Wrap Up ###
-
----
-Find out more about our [Complete Unity Developer Course](https://www.udemy.com/unitycourse?couponCode=GitHubDiscount).
